@@ -296,7 +296,7 @@
   .chrono-list h4 { font-family: "Noto Serif KR", serif; font-size: 22px; margin-bottom: 6px; }
   .chrono-list ul { list-style: none; font-size: 14px; }
   .chrono-list li { padding: 5px 0; display: flex; gap: 10px; }
-  .chrono-list li .mono { font-size: 12px; color: var(--muted); width: 52px; flex-shrink: 0; padding-top: 1px; }
+  .chrono-list li .mono { font-size: 11.5px; color: var(--muted); width: 80px; flex-shrink: 0; padding-top: 1px; }
 
   /* ───────── Skills ───────── */
   .skill-groups { border-top: 1px solid var(--ink); }
@@ -375,6 +375,8 @@
   .roles li { display: flex; gap: 12px; padding: 3px 0; }
   .roles li .mono { font-size: 12px; color: var(--muted); width: 104px; flex-shrink: 0; padding-top: 1px; }
   .roles.short li .mono { width: 40px; }
+  .roles.tut li > span:first-child { width: 96px; flex-shrink: 0; }
+  .roles.tut li .mono { width: auto; }
 
   .awards-head { margin-top: 56px; }
   .awards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 16px; }
@@ -616,14 +618,18 @@
           <p class="lede ko">표정 · 음성 · 텍스트로 감정을 인식하고, 대화를 숏폼 영상으로 되돌려 보여주며 '자기 거리두기'를 돕는 서비스입니다.</p>
           <p class="lede en">It reads emotion from facial expression, voice and text, then plays the conversation back as a short-form video so users can step back and look at their own feelings.</p>
           <ul class="ko">
-            <li>캡스톤(종합설계) 팀 '사고뭉치' · 한이음 ICT 멘토링 드림업 2026</li>
+            <li>캡스톤(종합설계) 팀 '사고뭉치' · 베이스라인 설계와 사업기획 담당</li>
+            <li>한이음 공모전 참여 (2026.04.01 – 10.30) — 「멀티채널 감정인식 및 시각화 AI 파이프라인 기반 AI 영상 일기 플랫폼」</li>
+            <li>한이음 드림업 창업 멘토링 참여 (2026.06.12 – 11.27)</li>
             <li>베이스라인 캘리브레이션 · 멀티모달 감정분석 개발 참여, 숏폼 자동 생성 기능 구현(API 연동)</li>
             <li>팀 내 사업 측면 단독 담당 — 산업구조 · 시장 분석, 차별화, 방향 전환 제안</li>
             <li>대한전자공학회 하계학술대회(제주) 발표 → 우수학생논문상, 추계 후속 논문 준비 중</li>
             <li>창업 공모전 · 세종시 공공데이터 공모전 참가, 창업 멘토링 피드백</li>
           </ul>
           <ul class="en">
-            <li>Capstone design team "Sagomungchi" · Hanium ICT Mentoring Dream-Up 2026</li>
+            <li>Capstone design team "Sagomungchi" · baseline design and business planning</li>
+            <li>Hanium ICT competition (2026.04.01 – 10.30): "AI video-diary platform built on a multichannel emotion-recognition and visualization AI pipeline"</li>
+            <li>Hanium Dream-Up startup mentoring (2026.06.12 – 11.27)</li>
             <li>Worked on baseline calibration and multimodal emotion analysis; built auto-generated short-form videos (API integration)</li>
             <li>Sole owner of the business side: industry and market analysis, differentiation, user-driven pivot proposals</li>
             <li>Presented at the IEIE Summer Conference (Jeju) → Best Student Paper Award; follow-up paper in progress</li>
@@ -746,10 +752,20 @@
             <p class="en">Team "Sagomungchi" · Baseline design and business planning</p>
           </div>
           <div class="ex">
-            <span class="mono">2021 – 2026 · <span class="ko">4회</span><span class="en">4 terms</span></span>
-            <h4><span class="ko">홍익대학교 재능기부 학습 튜터</span><span class="en">Hongik University Peer Tutor</span></h4>
-            <p class="ko">학습 튜터링 / 새내기 학습 튜터링 — 튜티의 부족 과목 · 역량 지도</p>
-            <p class="en">Tutoring and freshman tutoring, coaching students on the subjects they struggled with</p>
+            <span class="mono">2021 – 2026 · <span class="ko">5개 학기</span><span class="en">5 semesters</span></span>
+            <h4><span class="ko">홍익대학교 학습 튜터</span><span class="en">Hongik University Tutor</span></h4>
+            <p class="ko">모두 튜터 역할 — 튜티의 부족 과목 · 역량 지도</p>
+            <p class="en">Always as the tutor, coaching students on the subjects they struggled with</p>
+            <ul class="roles tut ko">
+              <li><span>학습 튜터링</span><span class="mono">2021-2 · 2025-1 · 2025-2 · 2026-1</span></li>
+              <li><span>학습도우미</span><span class="mono">2022-2</span></li>
+              <li><span>새내기 튜터링</span><span class="mono">2025-1 · 2026-1</span></li>
+            </ul>
+            <ul class="roles tut en">
+              <li><span>Peer tutoring</span><span class="mono">F21 · S25 · F25 · S26</span></li>
+              <li><span>Study helper</span><span class="mono">F22</span></li>
+              <li><span>Freshman tutoring</span><span class="mono">S25 · S26</span></li>
+            </ul>
           </div>
           <div class="ex">
             <span class="mono"><span class="ko">대외활동</span><span class="en">External</span></span>
@@ -888,8 +904,16 @@
   var ROWS = [
     { ko: '<b>Oddo</b><br>캡스톤', en: '<b>Oddo</b><br>Capstone', color: 'var(--c-feat)', items: [
       { s: T(2025, 3), e: T(2026, 11, 30), fade: true,
-        ko: ['Oddo · 감정 객관화 플랫폼', '2025 – 현재', '캡스톤(종합설계) · 한이음 드림업 2026(04–11) · 베이스라인 설계와 사업기획 담당'],
-        en: ['Oddo · emotion platform', '2025 – now', 'Capstone design · Hanium Dream-Up 2026 (Apr–Nov) · baseline design and business planning'] }
+        ko: ['Oddo · 감정 객관화 플랫폼', '2025 – 현재', '캡스톤(종합설계) 팀 \'사고뭉치\' · 베이스라인 설계와 사업기획 담당'],
+        en: ['Oddo · emotion platform', '2025 – now', 'Capstone design team · baseline design and business planning'] }
+    ]},
+    { ko: '한이음', en: 'Hanium', color: 'var(--c-proj)', items: [
+      { s: T(2026, 4, 1), e: T(2026, 10, 30), y: 32, h: 8, labelLeft: true,
+        ko: ['한이음 공모전', '2026.04.01 – 10.30', '멀티채널 감정인식 및 시각화 AI 파이프라인 기반 AI 영상 일기 플랫폼'],
+        en: ['Hanium competition', '2026.04.01 – 10.30', 'AI video-diary platform on a multichannel emotion-recognition and visualization pipeline'] },
+      { s: T(2026, 6, 12), e: T(2026, 11, 27), y: 12, h: 8, labelLeft: true,
+        ko: ['드림업 창업 멘토링', '2026.06.12 – 11.27', '한이음 드림업 창업 멘토링'],
+        en: ['Dream-Up mentoring', '2026.06.12 – 11.27', 'Hanium Dream-Up startup mentoring'] }
     ]},
     { ko: '프로젝트', en: 'Projects', color: 'var(--c-proj)', items: [
       { s: T(2022, 4), e: T(2022, 5, 31), ko: ['포트폴리오 웹', '2022.04 – 05', '자기주도학습동아리 · 4인 팀장'], en: ['Portfolio sites', '2022.04 – 05', 'Study club · team lead of 4'] },
@@ -914,11 +938,12 @@
       { s: T(2021, 3), e: T(2022, 12, 31), ko: ['학과사무실 근로장학생', '2021 – 2022', '소프트웨어융합학과 사무실 · 2년'], en: ['Dept. office work-study', '2021 – 2022', 'Software Convergence Dept. office · 2 years'] },
       { s: T(2025, 3), e: T(2026, 7, 31), ko: ['학과사무실 근로장학생', '2025 – 2026.07경', '소프트웨어융합학과 사무실 · 2026-1학기까지'], en: ['Dept. office work-study', '2025 – c. 2026.07', 'Software Convergence Dept. office · through spring 2026'] }
     ]},
-    { ko: '튜터', en: 'Tutoring', color: 'var(--c-campus)', items: [
-      { s: T(2021, 10), e: T(2021, 12, 31), ko: ['학습 튜터', '2021.10 – 12', '재능기부 학습 튜터링'], en: ['Tutor', '2021.10 – 12', 'Peer tutoring'] },
-      { s: T(2025, 3), e: T(2025, 5, 31), ko: ['튜터', '2025.03 – 05', '재능기부 학습 튜터링'], en: ['Tutor', '2025.03 – 05', 'Peer tutoring'] },
-      { s: T(2025, 9), e: T(2025, 11, 30), ko: ['튜터', '2025.09 – 11', '새내기 학습 튜터링'], en: ['Tutor', '2025.09 – 11', 'Freshman tutoring'] },
-      { s: T(2026, 3), e: T(2026, 6, 30), ko: ['튜터', '2026.03 – 06', '재능기부 학습 튜터링'], en: ['Tutor', '2026.03 – 06', 'Peer tutoring'] }
+    { ko: '튜터링', en: 'Tutoring', color: 'var(--c-campus)', items: [
+      { s: T(2021, 9), e: T(2021, 12, 31), ko: ['학습 튜터링', '2021-2학기', '학습 튜터링 · 튜터'], en: ['Tutoring', 'Fall 2021', 'Peer tutoring · tutor'] },
+      { s: T(2022, 9), e: T(2022, 12, 31), ko: ['학습도우미', '2022-2학기', '학습도우미 · 튜터'], en: ['Study helper', 'Fall 2022', 'Study helper program · tutor'] },
+      { s: T(2025, 3), e: T(2025, 6, 30), ko: ['튜터', '2025-1학기', '학습 튜터링 · 새내기 튜터링 (튜터)'], en: ['Tutor', 'Spring 2025', 'Peer tutoring · freshman tutoring'] },
+      { s: T(2025, 9), e: T(2025, 12, 31), ko: ['튜터', '2025-2학기', '학습 튜터링 (튜터)'], en: ['Tutor', 'Fall 2025', 'Peer tutoring'] },
+      { s: T(2026, 3), e: T(2026, 6, 30), ko: ['튜터', '2026-1학기', '학습 튜터링 · 새내기 튜터링 (튜터)'], en: ['Tutor', 'Spring 2026', 'Peer tutoring · freshman tutoring'] }
     ]},
     { ko: '장학금', en: 'Scholarship', points: true, color: 'var(--c-schol)', items: [
       { s: T(2022, 3), ko: ['공로장학금', '2022-1학기', '성적우수장학금'], en: ['Gongro', 'Spring 2022', 'Academic excellence scholarship'] },
@@ -934,12 +959,12 @@
   ];
 
   var CHRONO = [
-    [2021, [['01–12', '학생회 문화체육부 부원', 'Student council, Culture & Sports member'], ['2021–22', '소프트웨어융합학과 사무실 근로장학생', 'Work-study, Software Convergence Dept. office'], ['10–12', '재능기부 학습 튜터 첫 활동', 'First term as a peer tutor']]],
-    [2022, [['01–12', '학생회 문화체육부 차장', 'Student council, Culture & Sports deputy head'], ['1학기', '공로장학금 (성적우수)', 'Gongro Scholarship (academic)'], ['04–05', '개인 포트폴리오 웹사이트 제작 (4인 팀장)', 'Built portfolio websites (team lead of 4)'], ['2학기', '협동장학금 (성적우수)', 'Hyeopdong Scholarship (academic)']]],
+    [2021, [['01–12', '학생회 문화체육부 부원', 'Student council, Culture & Sports member'], ['2021–22', '소프트웨어융합학과 사무실 근로장학생', 'Work-study, Software Convergence Dept. office'], ['2학기', '학습 튜터링 (튜터)', 'Peer tutoring (tutor)']]],
+    [2022, [['01–12', '학생회 문화체육부 차장', 'Student council, Culture & Sports deputy head'], ['1학기', '공로장학금 (성적우수)', 'Gongro Scholarship (academic)'], ['04–05', '개인 포트폴리오 웹사이트 제작 (4인 팀장)', 'Built portfolio websites (team lead of 4)'], ['2학기', '협동장학금 (성적우수)', 'Hyeopdong Scholarship (academic)'], ['2학기', '학습도우미 (튜터)', 'Study helper (tutor)']]],
     [2023, [['01.02', '육군 입대 · 제8사단 포병대대 수송중형운전병', 'Enlisted, ROK Army 8th Division artillery battalion (transport driver)']]],
     [2024, [['07.01', '군 복무 마침', 'Completed military service'], ['10–', '캐나다 토론토 어학연수 (~2025.01)', 'Language study in Toronto (to 2025.01)']]],
-    [2025, [['01–12', '학생회 기획부장', 'Student council, Head of Planning'], ['2025–', '학과사무실 근로장학생 (~2026.07경)', 'Dept. office work-study (to c. 2026.07)'], ['03–05', '학습 튜터', 'Peer tutor'], ['04–07', '노년층 학습지원 웹 서비스 (5인 팀장)', 'Learning site for seniors (team lead of 5)'], ['08', '우수동아리 선정', 'Best Club Award'], ['2학기', '협동장학금 (성적우수)', 'Hyeopdong Scholarship (academic)'], ['09–11', '학습 튜터', 'Peer tutor'], ['09–12', '한국경제TV 일경험 · 144시간', 'Korea Economic TV program · 144 hrs'], ['12', 'SQLD 취득', 'Earned SQLD']]],
-    [2026, [['01–12', '학생회 총무부장', 'Student council, Head of General Affairs'], ['1학기', '창조장학금 (성적우수)', 'Changjo Scholarship (academic)'], ['03–06', '학습 튜터', 'Peer tutor'], ['04–', '한이음 ICT 멘토링 드림업 · Oddo', 'Hanium Dream-Up · Oddo'], ['05–07', '한경닷컴 일경험 · 160시간', 'Hankyung.com program · 160 hrs'], ['06', '우수학생논문상 (대한전자공학회)', 'Best Student Paper Award (IEIE)'], ['09–', '데일리로맨틱 서비스 기획', 'Daily Romantic service planning']]]
+    [2025, [['01–12', '학생회 기획부장', 'Student council, Head of Planning'], ['2025–', '학과사무실 근로장학생 (~2026.07경)', 'Dept. office work-study (to c. 2026.07)'], ['1학기', '학습 튜터링 · 새내기 튜터링 (튜터)', 'Peer + freshman tutoring (tutor)'], ['04–07', '노년층 학습지원 웹 서비스 (5인 팀장)', 'Learning site for seniors (team lead of 5)'], ['08', '우수동아리 선정', 'Best Club Award'], ['2학기', '협동장학금 (성적우수)', 'Hyeopdong Scholarship (academic)'], ['2학기', '학습 튜터링 (튜터)', 'Peer tutoring (tutor)'], ['09–12', '한국경제TV 일경험 · 144시간', 'Korea Economic TV program · 144 hrs'], ['12', 'SQLD 취득', 'Earned SQLD']]],
+    [2026, [['01–12', '학생회 총무부장', 'Student council, Head of General Affairs'], ['1학기', '창조장학금 (성적우수)', 'Changjo Scholarship (academic)'], ['1학기', '학습 튜터링 · 새내기 튜터링 (튜터)', 'Peer + freshman tutoring (tutor)'], ['04.01–10.30', '한이음 공모전 참여 · AI 영상 일기 플랫폼', 'Hanium competition · AI video-diary platform'], ['05–07', '한경닷컴 일경험 · 160시간', 'Hankyung.com program · 160 hrs'], ['06', '우수학생논문상 (대한전자공학회)', 'Best Student Paper Award (IEIE)'], ['06.12–11.27', '한이음 드림업 창업 멘토링', 'Hanium Dream-Up startup mentoring'], ['09–', '데일리로맨틱 서비스 기획', 'Daily Romantic service planning']]]
   ];
 
   var chart = document.getElementById('chart');
@@ -969,8 +994,11 @@
             : '<span class="' + cls + '" style="left:' + l + '%;transform:translateX(-50%)">' + t[0] + '</span>';
         } else {
           var w = pos(it.e) - l;
-          track += '<button class="bar' + (it.fade ? ' fade' : '') + '" data-i="' + idx + '" style="--c:' + r.color + ';left:' + l + '%;width:' + w + '%;transition-delay:' + (idx * 40) + 'ms" aria-label="' + t[0] + '"></button>';
-          track += it.right
+          var size = it.y != null ? 'bottom:' + it.y + 'px;height:' + it.h + 'px;' : '';
+          track += '<button class="bar' + (it.fade ? ' fade' : '') + '" data-i="' + idx + '" style="--c:' + r.color + ';' + size + 'left:' + l + '%;width:' + w + '%;transition-delay:' + (idx * 40) + 'ms" aria-label="' + t[0] + '"></button>';
+          // 한 줄에 겹치는 막대 두 개: 라벨을 막대 왼쪽, 같은 높이에
+          if (it.labelLeft) track += '<span class="' + cls + '" style="right:' + (100 - l) + '%;margin-right:8px;bottom:' + (it.y + it.h / 2 - 10) + 'px">' + t[0] + '</span>';
+          else track += it.right
             ? '<span class="' + cls + '" style="right:' + (100 - l - w) + '%">' + t[0] + '</span>'
             : '<span class="' + cls + '" style="left:' + (it.fade ? l + w * .4 : l) + '%">' + t[0] + '</span>';
         }
